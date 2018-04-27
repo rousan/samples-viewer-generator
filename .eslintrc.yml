@@ -1,0 +1,6 @@
+extends: airbnb
+env:
+  browser: true
+  node: true
+rules:
+  import/no-extraneous-dependencies: off

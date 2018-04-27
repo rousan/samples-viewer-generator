@@ -1,0 +1,15 @@
+html, body {
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', 'Source Sans Pro', sans-serif;
+    font-size: 13px;
+    color: #444;
+    background-color: #fff;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
