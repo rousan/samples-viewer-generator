@@ -1,0 +1,38 @@
+{
+  "heading": "FusionBoard",
+  "logo": "images/logo.svg",
+  "samples": [
+    {
+      "name": "A Simple Chart",
+      "icon": "samples/simple-chart/logo.png",
+      "chart": "samples/simple-chart/chart/index.html",
+      "html": "samples/simple-chart/code.html",
+      "js": "samples/simple-chart/code.js",
+      "data": "samples/simple-chart/data.json"
+    },
+    {
+      "name": "Column Chart or Bar Chart",
+      "icon": "samples/column-chart/logo.png",
+      "chart": "samples/column-chart/chart/index.html",
+      "html": "samples/column-chart/code.html",
+      "js": "samples/column-chart/code.js",
+      "data": "samples/column-chart/data.json"
+    },
+    {
+      "name": "Multi line Chart",
+      "icon": "samples/multi-line-chart/logo.png",
+      "chart": "samples/multi-line-chart/chart/index.html",
+      "html": "samples/multi-line-chart/code.html",
+      "js": "samples/multi-line-chart/code.js",
+      "data": "samples/multi-line-chart/data.json"
+    },
+    {
+      "name": "A multi series Pie Chart",
+      "icon": "samples/pie-chart/logo.png",
+      "chart": "samples/pie-chart/chart/index.html",
+      "html": "samples/pie-chart/code.html",
+      "js": "samples/pie-chart/code.js",
+      "data": "samples/pie-chart/data.json"
+    }
+  ]
+}

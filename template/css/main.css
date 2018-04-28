@@ -1,15 +1,215 @@
 html, body {
     margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', 'Source Sans Pro', sans-serif;
+    font-family: "Segoe UI", Helvetica, Arial, sans-serif;
     font-size: 13px;
-    color: #444;
+    line-height: 1.5;
+    color: #24292e;
     background-color: #fff;
+}
+
+#root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
 }
 
 a {
     color: #337ab7;
     text-decoration: none;
+}
+
+.app-loader {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.app-loader .anim-holder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.app-loader img.loader {
+    height: 64px;
+}
+
+.app-loading-error {
+    padding: 40px;
+}
+
+.app-loading-error h2 {
+    padding: 0;
+    margin: 0 0 10px 0;
+    color: #B33A3A;
+    text-align: center;
+}
+
+.app-loading-error p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.sidebar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    -moz-flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 25%;
+    height: 100%;
+    border-right: 1px solid rgba(147,147,147,.12);
+    -webkit-box-shadow: 0 2px 7px 0 rgba(0,0,0,.03);
+            box-shadow: 0 2px 7px 0 rgba(0,0,0,.03);
+    -webkit-transition-property: margin-left;
+    transition-property: margin-left;
+    -webkit-transition-duration: 0.2345s;
+            transition-duration: 0.2345;
+    -webkit-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
+}
+
+.sidebar.open {
+    margin-left: 0px
+}
+
+.sidebar.close {
+    margin-left: -25%;
+}
+
+.sidebar-header {
+    width:100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 10px 35px;
+    background: #fff;
+}
+
+.sidebar-header .heading-link {
+    text-decoration: none;
+    color: #313131;
+    font-weight: bold;
+}
+
+.sidebar-header .heading-link .logo {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.sidebar-header .heading-link span {
+    margin-left: 15px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 18px;
+}
+
+.sample-item-list {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 50px 0 35px 35px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    background: #fff;
+}
+
+.sample-item-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sample-item-list ul li {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.sample-item-list ul li .active-sample-marker {
+    display: inline-block;
+    width: 3px;
+    height: 100%;
+    background-color: #16d3c0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.sample-item-list ul li .sample-item-icon {
+    margin-right: 15px;
+    border: 0;
+}
+
+.sample-item-list ul li .sample-item-title {
+    display: inline-block;
+    color: #313131;
+    font-weight: 600;
+    -webkit-transition: color 0.2257s ease-in;
+    transition: color 0.2257s ease-in;
+}
+
+.sample-item-list ul li.active .active-sample-marker {
+    visibility: visible;
+}
+
+.sample-item-list ul li.non-active .active-sample-marker {
+    visibility: hidden;
+}
+
+.sample-item-list ul li.active .sample-item-title {
+    color: #1e968a;
+}
+
+.sample-item-list ul li.non-active .sample-item-title {
+    color: #313131;
+}
+
+.sidebar-toggler {
+    height: 100%;
+    background: #f3f6f9;
+}
+
+.sample-viewer {
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 20px;
+    background: #f3f6f9;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1
 }
