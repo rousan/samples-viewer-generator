@@ -392,3 +392,52 @@ a {
     -webkit-box-sizing: border-box;;
             box-sizing: border-box;
 }
+
+.frameview {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box
+}
+
+.frameview iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.frameview .iframe-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.iframe-loader {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.iframe-loader .anim-holder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.iframe-loader img.loader {
+    height: 64px;
+}

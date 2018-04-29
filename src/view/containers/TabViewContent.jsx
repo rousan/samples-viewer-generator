@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FrameView from '../components/FrameView';
+import FrameView from './FrameView';
 import CodeHighLighter from '../components/CodeHighLighter';
 
 class TabViewContent extends React.Component {
