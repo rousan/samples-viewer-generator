@@ -3,7 +3,207 @@
   "logo": "images/logo.svg",
   "samples": [
     {
+      "name": "1 A Simple Chart",
+      "icon": "samples/simple-chart/logo.png",
+      "chart": "samples/simple-chart/chart/index.html",
+      "html": "samples/simple-chart/code.html",
+      "js": "samples/simple-chart/code.js",
+      "data": "samples/simple-chart/data.json"
+    },
+    {
+      "name": "2 A Simple Chart",
+      "icon": "samples/simple-chart/logo.png",
+      "chart": "samples/simple-chart/chart/index.html",
+      "html": "samples/simple-chart/code.html",
+      "js": "samples/simple-chart/code.js",
+      "data": "samples/simple-chart/data.json"
+    },
+    {
+      "name": "3 A Simple Chart",
+      "icon": "samples/simple-chart/logo.png",
+      "chart": "samples/simple-chart/chart/index.html",
+      "html": "samples/simple-chart/code.html",
+      "js": "samples/simple-chart/code.js",
+      "data": "samples/simple-chart/data.json"
+    },
+    {
+      "name": "4 A Simple Chart",
+      "icon": "samples/simple-chart/logo.png",
+      "chart": "samples/simple-chart/chart/index.html",
+      "html": "samples/simple-chart/code.html",
+      "js": "samples/simple-chart/code.js",
+      "data": "samples/simple-chart/data.json"
+    },
+    {
+      "name": "5 A Simple Chart",
+      "icon": "samples/simple-chart/logo.png",
+      "chart": "samples/simple-chart/chart/index.html",
+      "html": "samples/simple-chart/code.html",
+      "js": "samples/simple-chart/code.js",
+      "data": "samples/simple-chart/data.json"
+    },
+    {
+      "name": "6 A Simple Chart",
+      "icon": "samples/simple-chart/logo.png",
+      "chart": "samples/simple-chart/chart/index.html",
+      "html": "samples/simple-chart/code.html",
+      "js": "samples/simple-chart/code.js",
+      "data": "samples/simple-chart/data.json"
+    },
+    {
+      "name": "7 A Simple Chart",
+      "icon": "samples/simple-chart/logo.png",
+      "chart": "samples/simple-chart/chart/index.html",
+      "html": "samples/simple-chart/code.html",
+      "js": "samples/simple-chart/code.js",
+      "data": "samples/simple-chart/data.json"
+    },
+    {
+      "name": "8 A Simple Chart",
+      "icon": "samples/simple-chart/logo.png",
+      "chart": "samples/simple-chart/chart/index.html",
+      "html": "samples/simple-chart/code.html",
+      "js": "samples/simple-chart/code.js",
+      "data": "samples/simple-chart/data.json"
+    },
+    {
+      "name": "9 A Simple Chart",
+      "icon": "samples/simple-chart/logo.png",
+      "chart": "samples/simple-chart/chart/index.html",
+      "html": "samples/simple-chart/code.html",
+      "js": "samples/simple-chart/code.js",
+      "data": "samples/simple-chart/data.json"
+    },
+    {
+      "name": "10 A Simple Chart",
+      "icon": "samples/simple-chart/logo.png",
+      "chart": "samples/simple-chart/chart/index.html",
+      "html": "samples/simple-chart/code.html",
+      "js": "samples/simple-chart/code.js",
+      "data": "samples/simple-chart/data.json"
+    },
+    {
+      "name": "11 A Simple Chart",
+      "icon": "samples/simple-chart/logo.png",
+      "chart": "samples/simple-chart/chart/index.html",
+      "html": "samples/simple-chart/code.html",
+      "js": "samples/simple-chart/code.js",
+      "data": "samples/simple-chart/data.json"
+    },
+    {
+      "name": "12 A Simple Chart",
+      "icon": "samples/simple-chart/logo.png",
+      "chart": "samples/simple-chart/chart/index.html",
+      "html": "samples/simple-chart/code.html",
+      "js": "samples/simple-chart/code.js",
+      "data": "samples/simple-chart/data.json"
+    },
+    {
+      "name": "13 A Simple Chart",
+      "icon": "samples/simple-chart/logo.png",
+      "chart": "samples/simple-chart/chart/index.html",
+      "html": "samples/simple-chart/code.html",
+      "js": "samples/simple-chart/code.js",
+      "data": "samples/simple-chart/data.json"
+    },
+    {
+      "name": "14 A Simple Chart",
+      "icon": "samples/simple-chart/logo.png",
+      "chart": "samples/simple-chart/chart/index.html",
+      "html": "samples/simple-chart/code.html",
+      "js": "samples/simple-chart/code.js",
+      "data": "samples/simple-chart/data.json"
+    },
+    {
+      "name": "15 A Simple Chart",
+      "icon": "samples/simple-chart/logo.png",
+      "chart": "samples/simple-chart/chart/index.html",
+      "html": "samples/simple-chart/code.html",
+      "js": "samples/simple-chart/code.js",
+      "data": "samples/simple-chart/data.json"
+    },
+    {
+      "name": "16 A Simple Chart",
+      "icon": "samples/simple-chart/logo.png",
+      "chart": "samples/simple-chart/chart/index.html",
+      "html": "samples/simple-chart/code.html",
+      "js": "samples/simple-chart/code.js",
+      "data": "samples/simple-chart/data.json"
+    },
+    {
       "name": "A Simple Chart",
+      "icon": "samples/simple-chart/logo.png",
+      "chart": "samples/simple-chart/chart/index.html",
+      "html": "samples/simple-chart/code.html",
+      "js": "samples/simple-chart/code.js",
+      "data": "samples/simple-chart/data.json"
+    },
+    {
+      "name": "17 A Simple Chart",
+      "icon": "samples/simple-chart/logo.png",
+      "chart": "samples/simple-chart/chart/index.html",
+      "html": "samples/simple-chart/code.html",
+      "js": "samples/simple-chart/code.js",
+      "data": "samples/simple-chart/data.json"
+    },
+    {
+      "name": "18 A Simple Chart",
+      "icon": "samples/simple-chart/logo.png",
+      "chart": "samples/simple-chart/chart/index.html",
+      "html": "samples/simple-chart/code.html",
+      "js": "samples/simple-chart/code.js",
+      "data": "samples/simple-chart/data.json"
+    },
+    {
+      "name": "A Simple Chart",
+      "icon": "samples/simple-chart/logo.png",
+      "chart": "samples/simple-chart/chart/index.html",
+      "html": "samples/simple-chart/code.html",
+      "js": "samples/simple-chart/code.js",
+      "data": "samples/simple-chart/data.json"
+    },
+    {
+      "name": "19 A Simple Chart",
+      "icon": "samples/simple-chart/logo.png",
+      "chart": "samples/simple-chart/chart/index.html",
+      "html": "samples/simple-chart/code.html",
+      "js": "samples/simple-chart/code.js",
+      "data": "samples/simple-chart/data.json"
+    },
+    {
+      "name": "A Simple Chart",
+      "icon": "samples/simple-chart/logo.png",
+      "chart": "samples/simple-chart/chart/index.html",
+      "html": "samples/simple-chart/code.html",
+      "js": "samples/simple-chart/code.js",
+      "data": "samples/simple-chart/data.json"
+    },
+    {
+      "name": "20 A Simple Chart",
+      "icon": "samples/simple-chart/logo.png",
+      "chart": "samples/simple-chart/chart/index.html",
+      "html": "samples/simple-chart/code.html",
+      "js": "samples/simple-chart/code.js",
+      "data": "samples/simple-chart/data.json"
+    },
+    {
+      "name": "21 A Simple Chart",
+      "icon": "samples/simple-chart/logo.png",
+      "chart": "samples/simple-chart/chart/index.html",
+      "html": "samples/simple-chart/code.html",
+      "js": "samples/simple-chart/code.js",
+      "data": "samples/simple-chart/data.json"
+    },
+    {
+      "name": "22 A Simple Chart",
+      "icon": "samples/simple-chart/logo.png",
+      "chart": "samples/simple-chart/chart/index.html",
+      "html": "samples/simple-chart/code.html",
+      "js": "samples/simple-chart/code.js",
+      "data": "samples/simple-chart/data.json"
+    },
+    {
+      "name": "23 A Simple Chart",
       "icon": "samples/simple-chart/logo.png",
       "chart": "samples/simple-chart/chart/index.html",
       "html": "samples/simple-chart/code.html",

@@ -15,7 +15,11 @@ class SampleItemList extends React.Component {
   }
 
   componentDidMount() {
-    document.onkeydown = this.onKeydown;
+    document.addEventListener('keydown', this.onKeydown);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.onkeydown);
   }
 
   onKeydown(evt) {
@@ -31,24 +35,20 @@ class SampleItemList extends React.Component {
     }
   }
 
-  onUpArrowKeydown() {
-    let prevSampleId = this.state.activeSampleId - 1;
-    if (prevSampleId < 0) {
-      prevSampleId = this.props.samples.length - 1;
-    }
-    this.setState({
-      activeSampleId: prevSampleId,
-    });
-  }
-
   onDownArrowKeydown() {
     let nextSampleId = this.state.activeSampleId + 1;
     if (nextSampleId >= this.props.samples.length) {
       nextSampleId = 0;
     }
-    this.setState({
-      activeSampleId: nextSampleId,
-    });
+    this.onClickSampleItem(nextSampleId);
+  }
+
+  onUpArrowKeydown() {
+    let prevSampleId = this.state.activeSampleId - 1;
+    if (prevSampleId < 0) {
+      prevSampleId = this.props.samples.length - 1;
+    }
+    this.onClickSampleItem(prevSampleId);
   }
 
   onClickSampleItem(sampleIdx) {

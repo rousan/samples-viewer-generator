@@ -3,6 +3,7 @@ html, body {
     padding: 0;
     width: 100%;
     height: 100%;
+    overflow:hidden;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
 }
@@ -136,6 +137,7 @@ a {
 
 .sample-item-list {
     width: 100%;
+    height: 0;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     padding: 50px 0 35px 35px;
@@ -143,9 +145,13 @@ a {
         -ms-flex: 1;
             flex: 1;
     background: #fff;
+    overflow: hidden;
 }
 
 .sample-item-list ul {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -154,12 +160,15 @@ a {
 .sample-item-list ul li {
     margin: 0;
     padding: 0;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.sample-item-list ul li .sample-item-container {
     cursor: pointer;
     position: relative;
 }
 
-.sample-item-list ul li .active-sample-marker {
+.sample-item-list ul li .sample-item-container .active-sample-marker {
     display: inline-block;
     width: 3px;
     height: 100%;
@@ -169,12 +178,17 @@ a {
     top: 0;
 }
 
-.sample-item-list ul li .sample-item-icon {
+.sample-item-list ul li .sample-item-container .sample-item-icon {
     margin-right: 15px;
     border: 0;
 }
 
-.sample-item-list ul li .sample-item-title {
+.sample-item-list ul li .sample-item-container .sample-item-icon.default {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.sample-item-list ul li .sample-item-container .sample-item-title {
     display: inline-block;
     color: #313131;
     font-weight: 600;
@@ -182,34 +196,199 @@ a {
     transition: color 0.2257s ease-in;
 }
 
-.sample-item-list ul li.active .active-sample-marker {
+.sample-item-list ul li.active .sample-item-container .active-sample-marker {
     visibility: visible;
 }
 
-.sample-item-list ul li.non-active .active-sample-marker {
+.sample-item-list ul li.non-active .sample-item-container .active-sample-marker {
     visibility: hidden;
 }
 
-.sample-item-list ul li.active .sample-item-title {
+.sample-item-list ul li.active .sample-item-container .sample-item-title {
     color: #1e968a;
 }
 
-.sample-item-list ul li.non-active .sample-item-title {
+.sample-item-list ul li.non-active .sample-item-container .sample-item-title {
     color: #313131;
 }
 
 .sidebar-toggler {
-    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 25%;
+    height: auto;
     background: #f3f6f9;
+    z-index: 99999;
+    -webkit-transition-property: left;
+    transition-property: left;
+    -webkit-transition-duration: 0.2345s;
+            transition-duration: 0.2345;
+    -webkit-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
+    display: none;
+}
+
+.sidebar-toggler.open {
+    left: 25%;
+}
+
+.sidebar-toggler.close {
+    left: 0%;
 }
 
 .sample-viewer {
     height: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 20px;
     background: #f3f6f9;
     -webkit-box-flex: 1;
         -ms-flex: 1;
-            flex: 1
+            flex: 1;
+    padding: 70px 70px 70px;
+}
+
+.sample-content-container {
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.sample-loader {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: 1px solid #e8eaed;
+    background: #fff;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.sample-loader .anim-holder {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.sample-loader img.loader {
+    height: 35px;
+}
+
+.sample-load-error {
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #e8eaed;
+    background: #fff;
+    padding: 40px;
+}
+
+.sample-load-error h2 {
+    padding: 0;
+    margin: 0 0 10px 0;
+    color: #B33A3A;
+    text-align: center;
+}
+
+.sample-load-error p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.sample-tabview {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.tab-labels-container {
+    text-align: left;
+    z-index: 99999;
+    margin-bottom: -2px;
+}
+
+.tabview-label {
+    color: rgb(157, 170, 182);
+    background-color: rgb(245, 247, 249);
+    display: inline-block;
+    font-size: 13px;
+    line-height: 1.5;
+    font-weight: 600;
+    margin: 0px;
+    padding: 8px 25px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(229, 229, 229) rgb(229, 229, 229) rgb(229, 229, 229) transparent;
+    -webkit-transition: color 250ms ease-out;
+    transition: color 250ms ease-out;
+    outline: none;
+    cursor: pointer;
+}
+
+
+.tab-labels-container:first-child {
+    border-left: 1px solid rgb(229, 229, 229)
+}
+
+.tabview-label.active {
+    font-weight: 600;
+    border-bottom-color: #fff;
+    background: #fff;
+    color: rgb(36, 42, 49);
+}
+
+.tabview-label.non-active {
+    font-weight: 600;
+    border-bottom-color: rgb(229, 229, 229);
+    background: rgb(245, 247, 249);
+    color: rgb(157, 170, 182);
+}
+
+.tab-contents-container {
+    width: 100%;
+    height: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px solid #e8eaed;
+    background: #fff;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+}
+
+.tabview-content {
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.tabview-content.active {
+    display: block;
+}
+
+.tabview-content.non-active {
+    display: none;
+}
+
+.tabview-content-wrapper {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #e8eaed;
+    -webkit-box-sizing: border-box;;
+            box-sizing: border-box;
 }

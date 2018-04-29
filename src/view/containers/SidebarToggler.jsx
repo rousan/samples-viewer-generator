@@ -34,7 +34,7 @@ class SidebarToggler extends React.Component {
 
   render() {
     return (
-      <div className="sidebar-toggler">
+      <div className={`sidebar-toggler ${this.state.isOpen ? 'open' : 'close'}`}>
         <button onClick={this.onClickToggler}> { this.state.isOpen ? 'close' : 'open' } </button>
       </div>
     );

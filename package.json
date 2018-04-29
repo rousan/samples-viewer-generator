@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/rousan/samples-viewer-generator#readme",
   "devDependencies": {
+    "axios": "^0.18.0",
     "babel-core": "^6.26.2",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
@@ -46,6 +47,6 @@
     "whatwg-fetch": "^2.0.4"
   },
   "dependencies": {
-    "axios": "^0.18.0"
+    "lodash": "^4.17.10"
   }
 }

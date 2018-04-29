@@ -1,1 +1,3 @@
-js
+function abc() {
+  console.log("dd")
+}

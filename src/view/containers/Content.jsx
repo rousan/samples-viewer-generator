@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import axios from 'axios';
 import Sidebar from './Sidebar';
 import SidebarToggler from './SidebarToggler';
 import SampleViewer from './SampleViewer';
+
+const sampleDataCache = {};
 
 class Content extends React.Component {
   constructor(props) {
@@ -10,6 +13,8 @@ class Content extends React.Component {
 
     this.state = {
       activeSampleIdx: 0,
+      sampleLoading: true,
+      sampleLoadingError: null,
       sidebarStatus: 'open',
     };
 
@@ -17,10 +22,27 @@ class Content extends React.Component {
     this.onClickSidebarToggler = this.onClickSidebarToggler.bind(this);
   }
 
+  componentDidMount() {
+    this.loadSampleData(0);
+  }
+
   onClickSampleItem(sampleIdx) {
-    this.setState({
-      activeSampleIdx: sampleIdx,
-    });
+    if (sampleIdx === this.activeSampleIdx) { return; }
+
+    if (sampleDataCache[sampleIdx]) {
+      this.setState({
+        activeSampleIdx: sampleIdx,
+        sampleLoading: false,
+        sampleLoadingError: null,
+      });
+    } else {
+      this.setState({
+        activeSampleIdx: sampleIdx,
+        sampleLoading: true,
+        sampleLoadingError: null,
+      });
+      this.loadSampleData(sampleIdx);
+    }
   }
 
   onClickSidebarToggler(status) {
@@ -28,6 +50,58 @@ class Content extends React.Component {
       sidebarStatus: status,
     });
   }
+
+  loadSampleData(sampleIdx) {
+    const sampleToLoad = this.props.config.samples[sampleIdx];
+    const loadedSample = { ...sampleToLoad };
+    const promises = [];
+    const reqConfig = {
+      transformResponse: undefined,
+      params: {
+        _: Date.now(),
+      },
+    };
+
+    if (sampleToLoad.html) {
+      promises.push(axios.get(sampleToLoad.html, reqConfig));
+    } else {
+      promises.push(Promise.resolve(null));
+    }
+    if (sampleToLoad.js) {
+      promises.push(axios.get(sampleToLoad.js, reqConfig));
+    } else {
+      promises.push(Promise.resolve(null));
+    }
+    if (sampleToLoad.data) {
+      promises.push(axios.get(sampleToLoad.data, reqConfig));
+    } else {
+      promises.push(Promise.resolve(null));
+    }
+
+    axios.all(promises)
+      .then(axios.spread((htmlRes, jsRes, dataRes) => {
+        loadedSample.html = htmlRes ? String(htmlRes.data) : null;
+        loadedSample.js = jsRes ? String(jsRes.data) : null;
+        loadedSample.data = dataRes ? String(dataRes.data) : null;
+
+        sampleDataCache[sampleIdx] = loadedSample;
+        if (sampleIdx === this.state.activeSampleIdx) {
+          this.setState({
+            sampleLoading: false,
+            sampleLoadingError: null,
+          });
+        }
+      }))
+      .catch((err) => {
+        if (sampleIdx === this.state.activeSampleIdx) {
+          this.setState({
+            sampleLoading: false,
+            sampleLoadingError: err,
+          });
+        }
+      });
+  }
+
 
   render() {
     return (
@@ -38,7 +112,12 @@ class Content extends React.Component {
           status={this.state.sidebarStatus}
         />
         <SidebarToggler onClick={this.onClickSidebarToggler} />
-        <SampleViewer sample={this.props.config.samples[this.state.activeSampleIdx]} />
+        <SampleViewer
+          sampleName={this.props.config.samples[this.state.activeSampleIdx].name}
+          sample={sampleDataCache[this.state.activeSampleIdx]}
+          loading={this.state.sampleLoading}
+          error={this.state.sampleLoadingError}
+        />
       </div>
     );
   }
