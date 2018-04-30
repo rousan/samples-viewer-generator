@@ -68,6 +68,7 @@ class SampleTabView extends React.Component {
       js: { name: 'JavaScript', value: sample.js },
       html: { name: 'HTML', value: sample.html },
       data: { name: 'Data', value: sample.data },
+      notes: { name: 'Notes', value: sample.notes },
     };
   }
 

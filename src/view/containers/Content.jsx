@@ -77,12 +77,18 @@ class Content extends React.Component {
     } else {
       promises.push(Promise.resolve(null));
     }
+    if (sampleToLoad.notes) {
+      promises.push(axios.get(sampleToLoad.notes, reqConfig));
+    } else {
+      promises.push(Promise.resolve(null));
+    }
 
     axios.all(promises)
-      .then(axios.spread((htmlRes, jsRes, dataRes) => {
+      .then(axios.spread((htmlRes, jsRes, dataRes, notesRes) => {
         loadedSample.html = htmlRes ? String(htmlRes.data) : null;
         loadedSample.js = jsRes ? String(jsRes.data) : null;
         loadedSample.data = dataRes ? String(dataRes.data) : null;
+        loadedSample.notes = notesRes ? String(notesRes.data) : null;
 
         sampleDataCache[sampleIdx] = loadedSample;
         if (sampleIdx === this.state.activeSampleIdx) {

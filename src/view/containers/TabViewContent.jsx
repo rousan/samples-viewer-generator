@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import FrameView from './FrameView';
 import CodeHighLighter from '../components/CodeHighLighter';
+import NotesReader from '../components/NotesReader';
 
 class TabViewContent extends React.Component {
   constructor(props) {
@@ -47,6 +48,14 @@ class TabViewContent extends React.Component {
             style={{ width: '100%', height: '100%' }}
             language="javascript"
             code={this.props.content}
+          />
+        );
+        break;
+      case 'notes':
+        content = (
+          <NotesReader
+            style={{ width: '100%', height: '100%' }}
+            data={this.props.content}
           />
         );
         break;

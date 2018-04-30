@@ -30,6 +30,9 @@ class SampleViewer extends React.Component {
 
     return (
       <div className="sample-viewer">
+        <div className="sample-heading-container">
+          <h2 className="sample-heading"> { this.props.sampleName } </h2>
+        </div>
         <div className="sample-content-container">
           <SampleLoadError
             style={{ display: showSampleLoadError ? 'block' : 'none' }}
