@@ -1,11 +1,15 @@
 {
-  "heading": "Charts of The Year",
-  "logo": "images/logo.png",
+  "site": {
+    "title": "Charts of The Year",
+    "heading": "Charts of The Year",
+    "logo": "./assets/logo.png",
+    "favicon": "./assets/favicon.ico"
+  },
   "samples": [
     {
       "name": "Simple column chart",
       "icon": "samples/column-chart/icon.png",
-      "chart": "samples/column-chart/chart/index.html",
+      "chart": "samples/column-chart/chart/",
       "html": "samples/column-chart/code.html",
       "js": "samples/column-chart/code.js",
       "data": "samples/column-chart/data.json",
@@ -14,7 +18,7 @@
     {
       "name": "Area 2D chart with gradient",
       "icon": "samples/area2d-chart/icon.png",
-      "chart": "samples/area2d-chart/chart/index.html",
+      "chart": "samples/area2d-chart/chart/",
       "html": "samples/area2d-chart/code.html",
       "js": "samples/area2d-chart/code.js",
       "data": "samples/area2d-chart/data.json",
@@ -23,7 +27,7 @@
     {
       "name": "Pie chart with legend",
       "icon": "samples/pie-chart/icon.png",
-      "chart": "samples/pie-chart/chart/index.html",
+      "chart": "samples/pie-chart/chart/",
       "html": "samples/pie-chart/code.html",
       "js": "samples/pie-chart/code.js",
       "data": "samples/pie-chart/data.json",
@@ -32,7 +36,7 @@
     {
       "name": "Zoom line dual Y axis chart",
       "icon": "samples/zoom-line-chart/icon.png",
-      "chart": "samples/zoom-line-chart/chart/index.html",
+      "chart": "samples/zoom-line-chart/chart/",
       "html": "samples/zoom-line-chart/code.html",
       "js": "samples/zoom-line-chart/code.js",
       "data": "samples/zoom-line-chart/data.json",
@@ -41,7 +45,7 @@
     {
       "name": "Simple World map",
       "icon": "samples/world-map/icon.png",
-      "chart": "samples/world-map/chart/index.html",
+      "chart": "samples/world-map/chart/",
       "html": "samples/world-map/code.html",
       "js": "samples/world-map/code.js",
       "data": "samples/world-map/data.json",

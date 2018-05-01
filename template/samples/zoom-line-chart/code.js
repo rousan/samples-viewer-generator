@@ -1,6 +1,6 @@
 FusionCharts.ready(() => {
-  const revenueChart = new FusionCharts({
-    type: 'column2d',
+  const visitChart = new FusionCharts({
+    type: 'zoomlinedy',
     renderAt: 'chart-container',
     width: '100%',
     height: '100%',

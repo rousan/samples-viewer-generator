@@ -235,6 +235,8 @@ a {
 
 .sample-viewer {
     height: 100%;
+    width: 100%;
+    overflow: scroll;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -410,7 +412,36 @@ a {
     height: 100%;
     position: relative;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box
+            box-sizing: border-box;
+    position: relative;
+}
+
+.chart-refresh {
+    position: absolute;
+    left: -4px;
+    top: -4px;
+    padding: 5px;
+    z-index: 999;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.chart-refresh img {
+    padding: 0;
+    margin: 0;
+    border-radius: 100%;
+    -webkit-box-shadow: 10 18px 19px 0 rgba(0,0,0,.03);
+            box-shadow: 10 18px 19px 0 rgba(0,0,0,.03);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+    -webkit-transition: border-radius 1s linear;
+    transition: border-radius 1s linear;
+}
+
+.chart-refresh:hover img {
+    -webkit-box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19);
+            box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)
 }
 
 .frameview iframe {
@@ -471,7 +502,7 @@ a {
 .help-btn-container img {
     padding: 0;
     margin: 0;
-    border-radius: 100px;
+    border-radius: 100%;
     -webkit-box-shadow: 10 18px 19px 0 rgba(0,0,0,.03);
             box-shadow: 10 18px 19px 0 rgba(0,0,0,.03);
     -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);

@@ -14,7 +14,11 @@ class SidebarToggler extends React.Component {
   }
 
   componentDidMount() {
-    document.onkeypress = this.onKeypress;
+    document.addEventListener('keypress', this.onKeypress);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keypress', this.onKeypress);
   }
 
   onKeypress(evt) {

@@ -19,7 +19,25 @@ class FrameView extends React.Component {
       url: props.url,
     };
 
+    this.iframeRef = React.createRef();
     this.onIframeLoad = this.onIframeLoad.bind(this);
+    this.onClickRefreshBtn = this.onClickRefreshBtn.bind(this);
+    this.onKeypress = this.onKeypress.bind(this);
+  }
+
+  componentDidMount() {
+    document.addEventListener('keypress', this.onKeypress);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keypress', this.onKeypress);
+  }
+
+  onKeypress(evt) {
+    evt = evt || window.event;
+    if (evt.key === 'r' || evt.key === 'R') {
+      this.onClickRefreshBtn();
+    }
   }
 
   onIframeLoad() {
@@ -28,10 +46,18 @@ class FrameView extends React.Component {
     });
   }
 
+  onClickRefreshBtn() {
+    this.iframeRef.current.contentWindow.location.reload(true);
+  }
+
   render() {
     return (
       <div className="frameview" style={this.props.style}>
+        <div className="chart-refresh" role="button" onClick={this.onClickRefreshBtn}>
+          <img width="20" src="images/refresh.png" alt="Refresh the chart" />
+        </div>
         <iframe
+          ref={this.iframeRef}
           width="100%"
           height="100%"
           src={this.state.url}

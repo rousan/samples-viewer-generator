@@ -13,6 +13,12 @@ const PopupHelp = () => (
       <br />
       <br />
       ← &nbsp; : &nbsp;&nbsp; navigate to prev tab
+      <br />
+      <br />
+      x &nbsp; : &nbsp;&nbsp; open or close the sidebar
+      <br />
+      <br />
+      r &nbsp; : &nbsp;&nbsp; refresh the chart
     </p>
   </div>
 );
