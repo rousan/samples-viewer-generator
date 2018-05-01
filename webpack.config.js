@@ -4,7 +4,6 @@ const config = {
   mode: 'development',
   entry: {
     main: './src/view/index.jsx',
-    fetch: 'whatwg-fetch',
   },
   output: {
     path: path.resolve(__dirname, 'template', 'js'),
@@ -26,14 +25,6 @@ const config = {
         },
       },
     ],
-  },
-  serve: {
-    port: 8080,
-    content: './template/',
-    dev: {
-      publicPath: '/js/',
-    },
-    clipboard: false,
   },
 };
 

@@ -1,10 +1,14 @@
 {
   "name": "samples-viewer-generator",
   "version": "1.0.0",
-  "description": "A CLI utility to generate a web app for data viz samples for presentation purpose",
+  "description": "A CLI utility to generate web app of data visualization samples for presentation purpose",
+  "bin": {
+    "samples-viewer-generator": "lib/cli.js",
+    "svgen": "lib/cli.js"
+  },
   "scripts": {
     "start": "webpack-serve",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production && babel src/cli -d lib"
   },
   "repository": {
     "type": "git",
@@ -16,9 +20,15 @@
     "viz",
     "cli",
     "generator",
-    "boilerplate"
+    "boilerplate",
+    "visualization",
+    "presentation",
+    "web",
+    "app",
+    "cli",
+    "utility"
   ],
-  "author": "Rousan Ali <rousanali786@gmail.com rousan.io>",
+  "author": "Rousan Ali <rousanali786@gmail.com> (https://rousan.io)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/rousan/samples-viewer-generator/issues"
@@ -26,11 +36,14 @@
   "homepage": "https://github.com/rousan/samples-viewer-generator#readme",
   "devDependencies": {
     "axios": "^0.18.0",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.2",
     "babel-loader": "^7.1.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "chai": "^4.1.2",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.11.0",
@@ -38,17 +51,23 @@
     "eslint-plugin-react": "^7.7.0",
     "highlight.js": "^9.12.0",
     "marked": "^0.3.19",
+    "mocha": "^5.1.1",
     "prismjs": "^1.14.0",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+    "react-popup": "^0.9.2",
     "react-slick": "^0.23.1",
     "webpack": "^4.6.0",
     "webpack-cli": "^2.0.15",
-    "webpack-serve": "^0.3.1",
-    "whatwg-fetch": "^2.0.4"
+    "webpack-serve": "^0.3.1"
   },
   "dependencies": {
+    "chalk": "^2.4.1",
+    "commander": "^2.15.1",
     "lodash": "^4.17.10"
+  },
+  "engines": {
+    "node": ">=4.0.0"
   }
 }

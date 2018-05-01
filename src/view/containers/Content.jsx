@@ -1,9 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import axios from 'axios';
+import Popup from 'react-popup';
 import Sidebar from './Sidebar';
 import SidebarToggler from './SidebarToggler';
 import SampleViewer from './SampleViewer';
+import PopupHelp from '../components/PopupHelp';
 
 const sampleDataCache = {};
 
@@ -20,6 +22,9 @@ class Content extends React.Component {
 
     this.onClickSampleItem = this.onClickSampleItem.bind(this);
     this.onClickSidebarToggler = this.onClickSidebarToggler.bind(this);
+    this.onClickHelpButton = this.onClickHelpButton.bind(this);
+
+    this.helpTitle = 'Keyboard Shortcuts';
   }
 
   componentDidMount() {
@@ -49,6 +54,17 @@ class Content extends React.Component {
     this.setState({
       sidebarStatus: status,
     });
+  }
+
+  onClickHelpButton() {
+    Popup.create({
+      title: this.helpTitle,
+      content: <PopupHelp />,
+      className: 'alert',
+      buttons: {
+        right: ['ok'],
+      },
+    }, true);
   }
 
   loadSampleData(sampleIdx) {
@@ -124,6 +140,15 @@ class Content extends React.Component {
           loading={this.state.sampleLoading}
           error={this.state.sampleLoadingError}
         />
+        <div className="help-btn-container" role="button" onClick={this.onClickHelpButton}>
+          <img
+            className="sample-item-icon"
+            src="images/help.png"
+            alt="Keyboard Shortcuts"
+            width="20"
+          />
+        </div>
+        <Popup className="mm-popup" />
       </div>
     );
   }

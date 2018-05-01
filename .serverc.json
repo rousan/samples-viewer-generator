@@ -1,0 +1,8 @@
+{
+  "port": 8080,
+  "content": "./template/",
+  "dev": {
+    "publicPath": "/js/"
+  },
+  "clipboard": false
+}
