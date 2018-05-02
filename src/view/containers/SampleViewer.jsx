@@ -21,6 +21,7 @@ const SampleViewer = (props) => {
     <div className="sample-viewer">
       <div className="sample-heading-container">
         <h2 className="sample-heading"> { props.sampleName } </h2>
+        <p className="sample-desc"> {props.sampleDesc} </p>
       </div>
       <div className="sample-content-container">
         <SampleLoadError
@@ -44,6 +45,7 @@ SampleViewer.defaultProps = {
   loading: true,
   error: null,
   sampleName: '',
+  sampleDesc: '',
 };
 
 SampleViewer.propTypes = {
@@ -54,6 +56,7 @@ SampleViewer.propTypes = {
     PropTypes.string,
   ]),
   sampleName: PropTypes.string,
+  sampleDesc: PropTypes.string,
 };
 
 export default SampleViewer;

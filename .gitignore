@@ -89,5 +89,6 @@ typings/
 .env
 
 package-lock.json
+build
 
 # End of https://www.gitignore.io/api/node,macos

@@ -46,7 +46,7 @@ FusionCharts.ready(() => {
 
   new FusionCharts({
     type: 'area2d',
-    renderAt: 'chart-container1',
+    renderAt: 'chart-container',
     width: '100%',
     height: '100%',
     dataFormat: 'json',

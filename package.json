@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "A CLI utility to generate web app of data visualization samples for presentation purpose",
   "bin": {
-    "samples-viewer-generator": "lib/cli.js",
-    "svgen": "lib/cli.js"
+    "samples-viewer-generator": "lib/cli/cli.js",
+    "svgen": "lib/cli/cli.js"
   },
   "scripts": {
-    "start": "webpack-serve",
-    "build": "webpack --mode production && babel src/cli -d lib"
+    "test": "npm run build && node lib/cli/cli.js -c example/config.json -o build",
+    "start": "rm -f template/js/main.js && webpack-serve",
+    "build": "webpack --mode production && babel src/cli -d lib/cli"
   },
   "repository": {
     "type": "git",
@@ -43,7 +44,6 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
-    "chai": "^4.1.2",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.11.0",
@@ -51,7 +51,6 @@
     "eslint-plugin-react": "^7.7.0",
     "highlight.js": "^9.12.0",
     "marked": "^0.3.19",
-    "mocha": "^5.1.1",
     "prismjs": "^1.14.0",
     "prop-types": "^15.6.1",
     "react": "^16.3.2",
@@ -65,6 +64,8 @@
   "dependencies": {
     "chalk": "^2.4.1",
     "commander": "^2.15.1",
+    "ejs": "^2.5.9",
+    "fs-extra": "^6.0.0",
     "lodash": "^4.17.10"
   },
   "engines": {

@@ -23,12 +23,24 @@ class Content extends React.Component {
     this.onClickSampleItem = this.onClickSampleItem.bind(this);
     this.onClickSidebarToggler = this.onClickSidebarToggler.bind(this);
     this.onClickHelpButton = this.onClickHelpButton.bind(this);
-
+    this.onKeypress = this.onKeypress.bind(this);
     this.helpTitle = 'Keyboard Shortcuts';
   }
 
   componentDidMount() {
+    document.addEventListener('keypress', this.onKeypress);
     this.loadSampleData(0);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keypress', this.onKeypress);
+  }
+
+  onKeypress(evt) {
+    evt = evt || window.event;
+    if (evt.key === '?') {
+      this.onClickHelpButton();
+    }
   }
 
   onClickSampleItem(sampleIdx) {
@@ -136,6 +148,7 @@ class Content extends React.Component {
         <SidebarToggler onClick={this.onClickSidebarToggler} />
         <SampleViewer
           sampleName={this.props.config.samples[this.state.activeSampleIdx].name}
+          sampleDesc={this.props.config.samples[this.state.activeSampleIdx].desc}
           sample={sampleDataCache[this.state.activeSampleIdx]}
           loading={this.state.sampleLoading}
           error={this.state.sampleLoadingError}

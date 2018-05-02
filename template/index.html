@@ -4,20 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,shrink-to-fit=no">
-  <title><%= site.title %></title>
-  <% if (site.favicon) { %>
-    <link rel="shortcut icon" href="<%= site.favicon %>">
-  <% } %>
+  <title><%= site.title %></title><% if (site.favicon) { %>
+  <link rel="shortcut icon" href="<%= site.favicon %>"><% } %>
   <link rel="stylesheet" type="text/css" href="css/slick.min.css" />
   <link rel="stylesheet" type="text/css" href="css/slick-theme.min.css" />
   <link rel="stylesheet" type="text/css" href="css/prism.css" />
   <link rel="stylesheet" type="text/css" href="css/highlightjs/default.css">
   <link rel="stylesheet" type="text/css" href="css/markdown.css">
   <link rel="stylesheet" type="text/css" href="css/popup.css" />
-  <link rel="stylesheet" type="text/css" href="css/main.css" />
-  <% if (site.customCSS) { %>
-    <link rel="stylesheet" type="text/css" href="css/custom.css" />
-  <% } %>
+  <link rel="stylesheet" type="text/css" href="css/main.css" /><% if (site.customCSS) { %>
+  <link rel="stylesheet" type="text/css" href="css/custom.css" /><% } %>
 </head>
 
 <body>

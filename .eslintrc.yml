@@ -10,3 +10,4 @@ rules:
   jsx-a11y/no-noninteractive-element-to-interactive-role: off
   jsx-a11y/interactive-supports-focus: off
   react/no-danger: off
+  no-await-in-loop: off
