@@ -1,0 +1,13 @@
+extends: airbnb
+env:
+  browser: true
+  node: true
+rules:
+  import/no-extraneous-dependencies: off
+  jsx-a11y/click-events-have-key-events: off
+  react/no-array-index-key: off
+  no-param-reassign: off
+  jsx-a11y/no-noninteractive-element-to-interactive-role: off
+  jsx-a11y/interactive-supports-focus: off
+  react/no-danger: off
+  no-await-in-loop: off
