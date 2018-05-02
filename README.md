@@ -20,7 +20,7 @@ can be used to present your existing data visualization samples in professional 
 
 `node` >= `v4.0.0`
 
-**Note**: If `node` and `npm` are not installed, Install them from [here](https://nodejs.org/en/download/).
+**Note**: If `node` and `npm` are not installed, Install those from [here](https://nodejs.org/en/download/).
 
 ## Installation
 
@@ -54,8 +54,8 @@ The `config.json` file:
       "desc": "<a short description of sample>",
       "icon": "<sample icon in .png, .jpeg, or .svg format> [optional]",
       "chart": "<a folder consisting of necessary files (e.g. index.html, js codes) to render the chart on an iframe>",
-      "html": "<html code for sample> [optional]",
-      "js": "<javascript code for sample> [optional]",
+      "html": "<html code for sample, working code not needed, just for showing purpose> [optional]",
+      "js": "<javascript code for sample, working code not needed, just for showing purpose> [optional]",
       "data": "<data for sample> [optional]",
       "notes": "<notes for samples in markdown format, supported github flavoured markdown(gfm)> [optional]"
     }
