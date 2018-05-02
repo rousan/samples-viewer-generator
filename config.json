@@ -1,0 +1,56 @@
+{
+  "heading": "Charts of The Year",
+  "logo": "images/logo.png",
+  "samples": [
+    {
+      "name": "Simple column chart",
+      "desc": "A simple column chart",
+      "icon": "samples/simple-column-chart/icon.png",
+      "chart": "samples/simple-column-chart/chart/index.html",
+      "html": "samples/simple-column-chart/code.html",
+      "js": "samples/simple-column-chart/code.js",
+      "data": "samples/simple-column-chart/data.json",
+      "notes": "samples/simple-column-chart/notes.md"
+    },
+    {
+      "name": "Area 2D chart with gradient",
+      "desc": "An area 2d chart with gradient support",
+      "icon": "samples/area-2d-chart-with-gradient/icon.png",
+      "chart": "samples/area-2d-chart-with-gradient/chart/index.html",
+      "html": "samples/area-2d-chart-with-gradient/code.html",
+      "js": "samples/area-2d-chart-with-gradient/code.js",
+      "data": "samples/area-2d-chart-with-gradient/data.json",
+      "notes": "samples/area-2d-chart-with-gradient/notes.md"
+    },
+    {
+      "name": "Pie chart with legend",
+      "desc": "Pie 2d chart with legend features",
+      "icon": "samples/pie-chart-with-legend/icon.png",
+      "chart": "samples/pie-chart-with-legend/chart/index.html",
+      "html": "samples/pie-chart-with-legend/code.html",
+      "js": "samples/pie-chart-with-legend/code.js",
+      "data": "samples/pie-chart-with-legend/data.json",
+      "notes": "samples/pie-chart-with-legend/notes.md"
+    },
+    {
+      "name": "Zoom line dual Y axis chart",
+      "desc": "A simple zoom line chart with dual Y axis",
+      "icon": "samples/zoom-line-dual-y-axis-chart/icon.png",
+      "chart": "samples/zoom-line-dual-y-axis-chart/chart/index.html",
+      "html": "samples/zoom-line-dual-y-axis-chart/code.html",
+      "js": "samples/zoom-line-dual-y-axis-chart/code.js",
+      "data": "samples/zoom-line-dual-y-axis-chart/data.json",
+      "notes": "samples/zoom-line-dual-y-axis-chart/notes.md"
+    },
+    {
+      "name": "Simple World map",
+      "desc": "A simple world map",
+      "icon": "samples/simple-world-map/icon.png",
+      "chart": "samples/simple-world-map/chart/index.html",
+      "html": "samples/simple-world-map/code.html",
+      "js": "samples/simple-world-map/code.js",
+      "data": "samples/simple-world-map/data.json",
+      "notes": "samples/simple-world-map/notes.md"
+    }
+  ]
+}
