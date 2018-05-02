@@ -29,6 +29,15 @@ class FrameView extends React.Component {
     document.addEventListener('keypress', this.onKeypress);
   }
 
+  componentDidUpdate() {
+    const iWidth = +this.iframeRef.current.contentWindow.innerWidth;
+    const iHeight = +this.iframeRef.current.contentWindow.innerHeight;
+
+    if (iWidth === 0 || iHeight === 0) {
+      this.onClickRefreshBtn();
+    }
+  }
+
   componentWillUnmount() {
     document.removeEventListener('keypress', this.onKeypress);
   }
