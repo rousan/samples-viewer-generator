@@ -1,7 +1,7 @@
 {
   "name": "samples-viewer-generator",
   "version": "1.0.0",
-  "description": "A CLI utility to generate web app of data visualization samples for presentation purpose",
+  "description": "A CLI utility tool to generate web app of data visualization samples for presentation purpose",
   "bin": {
     "samples-viewer-generator": "lib/cli/cli.js",
     "svgen": "lib/cli/cli.js"
